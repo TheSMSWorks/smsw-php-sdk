@@ -1,0 +1,212 @@
+# Swagger\Client\BatchMessagesApi
+
+All URIs are relative to *https://api.thesmsworks.co.uk:8080/v1*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**cancelScheduledBatchJob**](BatchMessagesApi.md#cancelScheduledBatchJob) | **DELETE** /batches/schedule/{batchid} | 
+[**getBatchById**](BatchMessagesApi.md#getBatchById) | **GET** /batch/{batchid} | 
+[**scheduleBatch**](BatchMessagesApi.md#scheduleBatch) | **POST** /batch/schedule | 
+[**sendBatch**](BatchMessagesApi.md#sendBatch) | **POST** /batch/send | 
+
+
+# **cancelScheduledBatchJob**
+> \Swagger\Client\Model\CancelledMessageResponse cancelScheduledBatchJob($batchid)
+
+
+
+Cancels a scheduled SMS message
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\BatchMessagesApi();
+$batchid = "batchid_example"; // string | The ID of the batch you would like returned
+
+try {
+    $result = $api_instance->cancelScheduledBatchJob($batchid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling BatchMessagesApi->cancelScheduledBatchJob: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **batchid** | **string**| The ID of the batch you would like returned |
+
+### Return type
+
+[**\Swagger\Client\Model\CancelledMessageResponse**](../Model/CancelledMessageResponse.md)
+
+### Authorization
+
+[JWT](../../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json;charset=UTF-8
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getBatchById**
+> \Swagger\Client\Model\MessagesResponse getBatchById($batchid)
+
+
+
+Retrieve all messages in a batch with the given batch ID
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\BatchMessagesApi();
+$batchid = "batchid_example"; // string | The ID of the batch you would like returned
+
+try {
+    $result = $api_instance->getBatchById($batchid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling BatchMessagesApi->getBatchById: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **batchid** | **string**| The ID of the batch you would like returned |
+
+### Return type
+
+[**\Swagger\Client\Model\MessagesResponse**](../Model/MessagesResponse.md)
+
+### Authorization
+
+[JWT](../../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json;charset=UTF-8
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **scheduleBatch**
+> \Swagger\Client\Model\ScheduledBatchResponse scheduleBatch($sms_message)
+
+
+
+Schedules a batch of SMS messages to be sent at the date-time you specify
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\BatchMessagesApi();
+$sms_message = new \Swagger\Client\Model\BatchMessage(); // \Swagger\Client\Model\BatchMessage | Message properties
+
+try {
+    $result = $api_instance->scheduleBatch($sms_message);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling BatchMessagesApi->scheduleBatch: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sms_message** | [**\Swagger\Client\Model\BatchMessage**](../Model/BatchMessage.md)| Message properties |
+
+### Return type
+
+[**\Swagger\Client\Model\ScheduledBatchResponse**](../Model/ScheduledBatchResponse.md)
+
+### Authorization
+
+[JWT](../../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json;charset=UTF-8
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **sendBatch**
+> \Swagger\Client\Model\BatchMessageResponse sendBatch($sms_message)
+
+
+
+Send a single SMS message to multiple recipients
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\BatchMessagesApi();
+$sms_message = new \Swagger\Client\Model\BatchMessage(); // \Swagger\Client\Model\BatchMessage | Message properties
+
+try {
+    $result = $api_instance->sendBatch($sms_message);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling BatchMessagesApi->sendBatch: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sms_message** | [**\Swagger\Client\Model\BatchMessage**](../Model/BatchMessage.md)| Message properties |
+
+### Return type
+
+[**\Swagger\Client\Model\BatchMessageResponse**](../Model/BatchMessageResponse.md)
+
+### Authorization
+
+[JWT](../../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json;charset=UTF-8
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
