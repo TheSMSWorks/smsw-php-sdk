@@ -1,6 +1,6 @@
 # Swagger\Client\UtilsApi
 
-All URIs are relative to *https://api.thesmsworks.co.uk:8080/v1*
+All URIs are relative to *https://api.thesmsworks.co.uk/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
