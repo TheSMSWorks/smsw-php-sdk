@@ -1,6 +1,6 @@
 <?php
 /**
- * TokenResponse
+ * QueryMetadata
  *
  * PHP version 5
  *
@@ -33,14 +33,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * TokenResponse Class Doc Comment
+ * QueryMetadata Class Doc Comment
  *
  * @category Class
+ * @description An array of objects containing metadata key/value pairs that have been saved on messages.
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class TokenResponse implements ModelInterface, ArrayAccess
+class QueryMetadata implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +50,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'TokenResponse';
+    protected static $swaggerModelName = 'Query_metadata';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +58,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'token' => 'string'
+        'schema' => '\Swagger\Client\Model\MetaData'
     ];
 
     /**
@@ -66,7 +67,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'token' => null
+        'schema' => null
     ];
 
     /**
@@ -96,7 +97,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'token' => 'token'
+        'schema' => 'schema'
     ];
 
     /**
@@ -105,7 +106,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'token' => 'setToken'
+        'schema' => 'setSchema'
     ];
 
     /**
@@ -114,7 +115,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'token' => 'getToken'
+        'schema' => 'getSchema'
     ];
 
     /**
@@ -177,7 +178,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['schema'] = isset($data['schema']) ? $data['schema'] : null;
     }
 
     /**
@@ -189,9 +190,6 @@ class TokenResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['token'] === null) {
-            $invalidProperties[] = "'token' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -204,33 +202,30 @@ class TokenResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['token'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets token
+     * Gets schema
      *
-     * @return string
+     * @return \Swagger\Client\Model\MetaData
      */
-    public function getToken()
+    public function getSchema()
     {
-        return $this->container['token'];
+        return $this->container['schema'];
     }
 
     /**
-     * Sets token
+     * Sets schema
      *
-     * @param string $token token
+     * @param \Swagger\Client\Model\MetaData $schema schema
      *
      * @return $this
      */
-    public function setToken($token)
+    public function setSchema($schema)
     {
-        $this->container['token'] = $token;
+        $this->container['schema'] = $schema;
 
         return $this;
     }

@@ -1,11 +1,11 @@
-# ExtendedErrorModel
+# MessageResponseFailurereason
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message** | **string** |  | 
-**error_code** | **float** |  | 
-**status** | **string** |  | 
+**code** | **float** |  | [optional] 
+**details** | **string** |  | [optional] 
+**permanent** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

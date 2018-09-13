@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **created** | **string** |  | 
 **customerid** | **string** |  | 
 **destination** | **float** |  | 
+**failurereason** | [**\Swagger\Client\Model\MessageResponseFailurereason**](MessageResponseFailurereason.md) |  | [optional] 
+**id** | **string** |  | [optional] 
 **keyword** | **string** |  | 
 **messageid** | **string** |  | 
 **modified** | **string** |  | 

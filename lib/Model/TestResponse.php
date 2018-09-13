@@ -1,6 +1,6 @@
 <?php
 /**
- * TokenResponse
+ * TestResponse
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * TokenResponse Class Doc Comment
+ * TestResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class TokenResponse implements ModelInterface, ArrayAccess
+class TestResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'TokenResponse';
+    protected static $swaggerModelName = 'TestResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'token' => 'string'
+        'message' => 'string'
     ];
 
     /**
@@ -66,7 +66,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'token' => null
+        'message' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'token' => 'token'
+        'message' => 'message'
     ];
 
     /**
@@ -105,7 +105,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'token' => 'setToken'
+        'message' => 'setMessage'
     ];
 
     /**
@@ -114,7 +114,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'token' => 'getToken'
+        'message' => 'getMessage'
     ];
 
     /**
@@ -177,7 +177,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -189,8 +189,8 @@ class TokenResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['token'] === null) {
-            $invalidProperties[] = "'token' can't be null";
+        if ($this->container['message'] === null) {
+            $invalidProperties[] = "'message' can't be null";
         }
         return $invalidProperties;
     }
@@ -204,7 +204,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['token'] === null) {
+        if ($this->container['message'] === null) {
             return false;
         }
         return true;
@@ -212,25 +212,25 @@ class TokenResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets token
+     * Gets message
      *
      * @return string
      */
-    public function getToken()
+    public function getMessage()
     {
-        return $this->container['token'];
+        return $this->container['message'];
     }
 
     /**
-     * Sets token
+     * Sets message
      *
-     * @param string $token token
+     * @param string $message message
      *
      * @return $this
      */
-    public function setToken($token)
+    public function setMessage($message)
     {
-        $this->container['token'] = $token;
+        $this->container['message'] = $message;
 
         return $this;
     }

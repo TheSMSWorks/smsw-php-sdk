@@ -1,6 +1,6 @@
 <?php
 /**
- * TokenResponse
+ * MessageResponseFailurereason
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * TokenResponse Class Doc Comment
+ * MessageResponseFailurereason Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class TokenResponse implements ModelInterface, ArrayAccess
+class MessageResponseFailurereason implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class TokenResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'TokenResponse';
+    protected static $swaggerModelName = 'MessageResponse_failurereason';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,9 @@ class TokenResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'token' => 'string'
+        'code' => 'float',
+        'details' => 'string',
+        'permanent' => 'bool'
     ];
 
     /**
@@ -66,7 +68,9 @@ class TokenResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'token' => null
+        'code' => null,
+        'details' => null,
+        'permanent' => null
     ];
 
     /**
@@ -96,7 +100,9 @@ class TokenResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'token' => 'token'
+        'code' => 'code',
+        'details' => 'details',
+        'permanent' => 'permanent'
     ];
 
     /**
@@ -105,7 +111,9 @@ class TokenResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'token' => 'setToken'
+        'code' => 'setCode',
+        'details' => 'setDetails',
+        'permanent' => 'setPermanent'
     ];
 
     /**
@@ -114,7 +122,9 @@ class TokenResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'token' => 'getToken'
+        'code' => 'getCode',
+        'details' => 'getDetails',
+        'permanent' => 'getPermanent'
     ];
 
     /**
@@ -177,7 +187,9 @@ class TokenResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
+        $this->container['permanent'] = isset($data['permanent']) ? $data['permanent'] : null;
     }
 
     /**
@@ -189,9 +201,6 @@ class TokenResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['token'] === null) {
-            $invalidProperties[] = "'token' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -204,33 +213,78 @@ class TokenResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['token'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets token
+     * Gets code
      *
-     * @return string
+     * @return float
      */
-    public function getToken()
+    public function getCode()
     {
-        return $this->container['token'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets token
+     * Sets code
      *
-     * @param string $token token
+     * @param float $code code
      *
      * @return $this
      */
-    public function setToken($token)
+    public function setCode($code)
     {
-        $this->container['token'] = $token;
+        $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets details
+     *
+     * @return string
+     */
+    public function getDetails()
+    {
+        return $this->container['details'];
+    }
+
+    /**
+     * Sets details
+     *
+     * @param string $details details
+     *
+     * @return $this
+     */
+    public function setDetails($details)
+    {
+        $this->container['details'] = $details;
+
+        return $this;
+    }
+
+    /**
+     * Gets permanent
+     *
+     * @return bool
+     */
+    public function getPermanent()
+    {
+        return $this->container['permanent'];
+    }
+
+    /**
+     * Sets permanent
+     *
+     * @param bool $permanent permanent
+     *
+     * @return $this
+     */
+    public function setPermanent($permanent)
+    {
+        $this->container['permanent'] = $permanent;
 
         return $this;
     }

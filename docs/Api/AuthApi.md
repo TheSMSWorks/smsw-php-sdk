@@ -20,11 +20,15 @@ Generates an API Key/Secret pair
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AuthApi();
+$apiInstance = new Swagger\Client\Api\AuthApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $customerid = "customerid_example"; // string | The Customer ID
 
 try {
-    $result = $api_instance->keySecret($customerid);
+    $result = $apiInstance->keySecret($customerid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthApi->keySecret: ', $e->getMessage(), PHP_EOL;
@@ -65,11 +69,15 @@ Generates a Json Web Token
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AuthApi();
+$apiInstance = new Swagger\Client\Api\AuthApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $credentials = new \Swagger\Client\Model\Login(); // \Swagger\Client\Model\Login | API Key & Secret
 
 try {
-    $result = $api_instance->login($credentials);
+    $result = $apiInstance->login($credentials);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthApi->login: ', $e->getMessage(), PHP_EOL;

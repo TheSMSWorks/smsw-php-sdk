@@ -23,15 +23,20 @@ Cancels a scheduled SMS message
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: JWT
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\BatchMessagesApi();
+$apiInstance = new Swagger\Client\Api\BatchMessagesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $batchid = "batchid_example"; // string | The ID of the batch you would like returned
 
 try {
-    $result = $api_instance->cancelScheduledBatchJob($batchid);
+    $result = $apiInstance->cancelScheduledBatchJob($batchid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BatchMessagesApi->cancelScheduledBatchJob: ', $e->getMessage(), PHP_EOL;
@@ -73,15 +78,20 @@ Retrieve all messages in a batch with the given batch ID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: JWT
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\BatchMessagesApi();
+$apiInstance = new Swagger\Client\Api\BatchMessagesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $batchid = "batchid_example"; // string | The ID of the batch you would like returned
 
 try {
-    $result = $api_instance->getBatchById($batchid);
+    $result = $apiInstance->getBatchById($batchid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BatchMessagesApi->getBatchById: ', $e->getMessage(), PHP_EOL;
@@ -115,7 +125,7 @@ Name | Type | Description  | Notes
 
 
 
-Schedules a batch of SMS messages to be sent at the date-time you specify
+Schedules a batch of SMS messages to be sent at the date time you specify
 
 ### Example
 ```php
@@ -123,15 +133,20 @@ Schedules a batch of SMS messages to be sent at the date-time you specify
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: JWT
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\BatchMessagesApi();
+$apiInstance = new Swagger\Client\Api\BatchMessagesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $sms_message = new \Swagger\Client\Model\BatchMessage(); // \Swagger\Client\Model\BatchMessage | Message properties
 
 try {
-    $result = $api_instance->scheduleBatch($sms_message);
+    $result = $apiInstance->scheduleBatch($sms_message);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BatchMessagesApi->scheduleBatch: ', $e->getMessage(), PHP_EOL;
@@ -173,15 +188,20 @@ Send a single SMS message to multiple recipients
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: JWT
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\BatchMessagesApi();
+$apiInstance = new Swagger\Client\Api\BatchMessagesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $sms_message = new \Swagger\Client\Model\BatchMessage(); // \Swagger\Client\Model\BatchMessage | Message properties
 
 try {
-    $result = $api_instance->sendBatch($sms_message);
+    $result = $apiInstance->sendBatch($sms_message);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BatchMessagesApi->sendBatch: ', $e->getMessage(), PHP_EOL;

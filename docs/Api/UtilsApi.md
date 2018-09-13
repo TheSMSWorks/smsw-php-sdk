@@ -4,42 +4,42 @@ All URIs are relative to *https://api.thesmsworks.co.uk/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**hello**](UtilsApi.md#hello) | **GET** /utils/hello | 
+[**test**](UtilsApi.md#test) | **GET** /utils/test | 
 
 
-# **hello**
-> \Swagger\Client\Model\HelloWorldResponse hello($name)
+# **test**
+> \Swagger\Client\Model\TestResponse test()
 
 
 
-Returns 'Hello' to the caller
+Returns the customer ID to the caller
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UtilsApi();
-$name = "name_example"; // string | The name of the person to whom to say hello
+$apiInstance = new Swagger\Client\Api\UtilsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 
 try {
-    $result = $api_instance->hello($name);
+    $result = $apiInstance->test();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UtilsApi->hello: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UtilsApi->test: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the person to whom to say hello | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\HelloWorldResponse**](../Model/HelloWorldResponse.md)
+[**\Swagger\Client\Model\TestResponse**](../Model/TestResponse.md)
 
 ### Authorization
 
