@@ -73,6 +73,11 @@ try {
 ?>
 ```
 
+## Test calls in Postman
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5348de8f62f83cddcee3)
+
+
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.thesmsworks.co.uk/v1*
