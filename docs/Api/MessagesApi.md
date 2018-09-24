@@ -300,17 +300,25 @@ Sends an SMS message
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: JWT
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = \Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\MessagesApi(
+$apiInstance = new \Swagger\Client\Api\MessagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
+    new \GuzzleHttp\Client(),
     $config
 );
-$sms_message = new \Swagger\Client\Model\Message(); // \Swagger\Client\Model\Message | Message properties
+
+$sender = 'MyCompany';
+$destination = '07777777777';
+$content = 'My super awesome message';
+$schedule = '';
+
+$data = array("sender"=>$sender,"destination"=>$destination,"content"=>$content,"schedule"=>$schedule);
+
+$sms_message = new \Swagger\Client\Model\Message($data);
 
 try {
     $result = $apiInstance->sendMessage($sms_message);
