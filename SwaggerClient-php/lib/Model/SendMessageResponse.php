@@ -208,6 +208,9 @@ class SendMessageResponse implements ModelInterface, ArrayAccess
         if ($this->container['credits'] === null) {
             $invalidProperties[] = "'credits' can't be null";
         }
+        if ($this->container['credits_used'] === null) {
+            $invalidProperties[] = "'credits_used' can't be null";
+        }
         return $invalidProperties;
     }
 
