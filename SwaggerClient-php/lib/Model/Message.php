@@ -62,7 +62,7 @@ class Message implements ModelInterface, ArrayAccess
 'content' => 'string',
 'schedule' => 'string',
 'tag' => 'string',
-'ttl' => 'BigDecimal',
+'ttl' => 'float',
 'responseemail' => 'string[]',
 'metadata' => 'object'    ];
 
@@ -371,7 +371,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
      * Gets ttl
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getTtl()
     {
@@ -381,7 +381,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
      * Sets ttl
      *
-     * @param BigDecimal $ttl The optional number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion.
+     * @param float $ttl The optional number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion.
      *
      * @return $this
      */

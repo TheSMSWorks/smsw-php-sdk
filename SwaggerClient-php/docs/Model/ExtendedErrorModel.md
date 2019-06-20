@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error_code** | [**BigDecimal**](BigDecimal.md) |  | 
+**error_code** | [**float**](float.md) |  | 
 **status** | **string** |  | 
 **permanent** | **bool** |  | [optional] 
 

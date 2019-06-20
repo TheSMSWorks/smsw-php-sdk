@@ -54,7 +54,7 @@ class ExtendedErrorModel extends ErrorModel
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'error_code' => 'BigDecimal',
+        'error_code' => 'float',
 'status' => 'string',
 'permanent' => 'bool'    ];
 
@@ -211,7 +211,7 @@ class ExtendedErrorModel extends ErrorModel
     /**
      * Gets error_code
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getErrorCode()
     {
@@ -221,7 +221,7 @@ class ExtendedErrorModel extends ErrorModel
     /**
      * Sets error_code
      *
-     * @param BigDecimal $error_code error_code
+     * @param float $error_code error_code
      *
      * @return $this
      */

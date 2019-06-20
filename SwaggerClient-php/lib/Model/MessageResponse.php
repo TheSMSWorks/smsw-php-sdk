@@ -60,7 +60,7 @@ class MessageResponse implements ModelInterface, ArrayAccess
 'content' => 'string',
 'created' => 'string',
 'customerid' => 'string',
-'destination' => 'BigDecimal',
+'destination' => 'float',
 'failurereason' => 'object',
 'id' => 'string',
 'keyword' => 'string',
@@ -409,7 +409,7 @@ class MessageResponse implements ModelInterface, ArrayAccess
     /**
      * Gets destination
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getDestination()
     {
@@ -419,7 +419,7 @@ class MessageResponse implements ModelInterface, ArrayAccess
     /**
      * Sets destination
      *
-     * @param BigDecimal $destination destination
+     * @param float $destination destination
      *
      * @return $this
      */

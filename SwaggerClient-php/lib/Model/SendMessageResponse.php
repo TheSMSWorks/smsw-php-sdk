@@ -58,8 +58,8 @@ class SendMessageResponse implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'messageid' => 'string',
 'status' => 'string',
-'credits' => 'BigDecimal',
-'credits_used' => 'BigDecimal'    ];
+'credits' => 'float',
+'credits_used' => 'float'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -277,7 +277,7 @@ class SendMessageResponse implements ModelInterface, ArrayAccess
     /**
      * Gets credits
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getCredits()
     {
@@ -287,7 +287,7 @@ class SendMessageResponse implements ModelInterface, ArrayAccess
     /**
      * Sets credits
      *
-     * @param BigDecimal $credits credits
+     * @param float $credits credits
      *
      * @return $this
      */
@@ -301,7 +301,7 @@ class SendMessageResponse implements ModelInterface, ArrayAccess
     /**
      * Gets credits_used
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getCreditsUsed()
     {
@@ -311,7 +311,7 @@ class SendMessageResponse implements ModelInterface, ArrayAccess
     /**
      * Sets credits_used
      *
-     * @param BigDecimal $credits_used credits_used
+     * @param float $credits_used credits_used
      *
      * @return $this
      */
