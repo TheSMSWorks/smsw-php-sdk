@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **content** | **string** |  | 
 **created** | **string** |  | 
 **customerid** | **string** |  | 
-**destination** | [**BigDecimal**](BigDecimal.md) |  | 
+**destination** | [**float**](float.md) |  | 
 **failurereason** | **object** |  | [optional] 
 **id** | **string** |  | [optional] 
 **keyword** | **string** |  | 

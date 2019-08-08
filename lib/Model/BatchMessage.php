@@ -62,7 +62,7 @@ class BatchMessage implements ModelInterface, ArrayAccess
 'content' => 'string',
 'schedule' => 'string',
 'tag' => 'string',
-'ttl' => 'BigDecimal'    ];
+'ttl' => 'float'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -362,7 +362,7 @@ class BatchMessage implements ModelInterface, ArrayAccess
     /**
      * Gets ttl
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getTtl()
     {
@@ -372,7 +372,7 @@ class BatchMessage implements ModelInterface, ArrayAccess
     /**
      * Sets ttl
      *
-     * @param BigDecimal $ttl The number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion.
+     * @param float $ttl The number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion.
      *
      * @return $this
      */

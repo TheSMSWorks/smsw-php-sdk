@@ -56,7 +56,7 @@ class CreditsResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'credits' => 'BigDecimal'    ];
+        'credits' => 'float'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class CreditsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets credits
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getCredits()
     {
@@ -212,7 +212,7 @@ class CreditsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets credits
      *
-     * @param BigDecimal $credits credits
+     * @param float $credits credits
      *
      * @return $this
      */

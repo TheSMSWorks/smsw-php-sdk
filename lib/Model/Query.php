@@ -58,7 +58,7 @@ class Query implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'status' => 'string',
-'credits' => 'BigDecimal',
+'credits' => 'float',
 'destination' => 'string',
 'sender' => 'string',
 'keyword' => 'string',
@@ -266,7 +266,7 @@ class Query implements ModelInterface, ArrayAccess
     /**
      * Gets credits
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getCredits()
     {
@@ -276,7 +276,7 @@ class Query implements ModelInterface, ArrayAccess
     /**
      * Sets credits
      *
-     * @param BigDecimal $credits The number of credits used on the message
+     * @param float $credits The number of credits used on the message
      *
      * @return $this
      */
