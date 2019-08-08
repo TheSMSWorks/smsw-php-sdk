@@ -4,12 +4,12 @@ All URIs are relative to *https://api.thesmsworks.co.uk/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelScheduledJob**](MessagesApi.md#cancelScheduledJob) | **DELETE** /messages/schedule/{messageid} | 
-[**getInboxMessages**](MessagesApi.md#getInboxMessages) | **POST** /messages/inbox | 
-[**getMessageById**](MessagesApi.md#getMessageById) | **GET** /messages/{messageid} | 
-[**getMessages**](MessagesApi.md#getMessages) | **POST** /messages | 
-[**scheduleMessage**](MessagesApi.md#scheduleMessage) | **POST** /message/schedule | 
-[**sendMessage**](MessagesApi.md#sendMessage) | **POST** /message/send | 
+[**cancelScheduledJob**](MessagesApi.md#cancelscheduledjob) | **DELETE** /messages/schedule/{messageid} | 
+[**getInboxMessages**](MessagesApi.md#getinboxmessages) | **POST** /messages/inbox | 
+[**getMessageById**](MessagesApi.md#getmessagebyid) | **GET** /messages/{messageid} | 
+[**getMessages**](MessagesApi.md#getmessages) | **POST** /messages | 
+[**scheduleMessage**](MessagesApi.md#schedulemessage) | **POST** /message/schedule | 
+[**sendMessage**](MessagesApi.md#sendmessage) | **POST** /message/send | 
 
 # **cancelScheduledJob**
 > \Swagger\Client\Model\CancelledMessageResponse cancelScheduledJob($messageid)
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMessages**
-> \Swagger\Client\Model\MessagesResponse getMessages($body)
+> \Swagger\Client\Model\MessagesResponse[] getMessages($body)
 
 
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\MessagesResponse**](../Model/MessagesResponse.md)
+[**\Swagger\Client\Model\MessagesResponse[]**](../Model/MessagesResponse.md)
 
 ### Authorization
 

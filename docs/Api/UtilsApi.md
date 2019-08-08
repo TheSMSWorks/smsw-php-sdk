@@ -4,7 +4,7 @@ All URIs are relative to *https://api.thesmsworks.co.uk/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getError**](UtilsApi.md#getError) | **GET** /utils/errors/{errorcode} | 
+[**getError**](UtilsApi.md#geterror) | **GET** /utils/errors/{errorcode} | 
 [**test**](UtilsApi.md#test) | **GET** /utils/test | 
 
 # **getError**

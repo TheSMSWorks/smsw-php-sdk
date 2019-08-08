@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/thesmsworks/smsw-php-sdk.git"
+      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
     }
   ],
   "require": {
-    "thesmsworks/smsw-php-sdk": "*@dev"
+    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
   }
 }
 ```
@@ -61,7 +61,7 @@ $apiInstance = new Swagger\Client\Api\AuthApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$customerid = "customerid_example"; // string | The Customer ID
+$customerid = "customerid_example"; // string | Utility method. Please generate your API key by following the instructions on your account page at https://thesmsworks.co.uk/user/login
 
 try {
     $result = $apiInstance->keySecret($customerid);

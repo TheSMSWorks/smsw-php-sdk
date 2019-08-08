@@ -4,10 +4,10 @@ All URIs are relative to *https://api.thesmsworks.co.uk/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelScheduledBatchJob**](BatchMessagesApi.md#cancelScheduledBatchJob) | **DELETE** /batches/schedule/{batchid} | 
-[**getBatchById**](BatchMessagesApi.md#getBatchById) | **GET** /batch/{batchid} | 
-[**scheduleBatch**](BatchMessagesApi.md#scheduleBatch) | **POST** /batch/schedule | 
-[**sendBatch**](BatchMessagesApi.md#sendBatch) | **POST** /batch/send | 
+[**cancelScheduledBatchJob**](BatchMessagesApi.md#cancelscheduledbatchjob) | **DELETE** /batches/schedule/{batchid} | 
+[**getBatchById**](BatchMessagesApi.md#getbatchbyid) | **GET** /batch/{batchid} | 
+[**scheduleBatch**](BatchMessagesApi.md#schedulebatch) | **POST** /batch/schedule | 
+[**sendBatch**](BatchMessagesApi.md#sendbatch) | **POST** /batch/send | 
 
 # **cancelScheduledBatchJob**
 > \Swagger\Client\Model\CancelledMessageResponse cancelScheduledBatchJob($batchid)

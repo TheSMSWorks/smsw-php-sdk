@@ -4,7 +4,7 @@ All URIs are relative to *https://api.thesmsworks.co.uk/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**keySecret**](AuthApi.md#keySecret) | **GET** /auth/getApiKey | 
+[**keySecret**](AuthApi.md#keysecret) | **GET** /auth/getApiKey | 
 [**login**](AuthApi.md#login) | **POST** /auth/token | 
 
 # **keySecret**
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 
-Generates an API Key/Secret pair
+Utility method. Please generate your API key by following the instructions on your account page at https://thesmsworks.co.uk/user/login
 
 ### Example
 ```php
@@ -24,7 +24,7 @@ $apiInstance = new Swagger\Client\Api\AuthApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$customerid = "customerid_example"; // string | The Customer ID
+$customerid = "customerid_example"; // string | Utility method. Please generate your API key by following the instructions on your account page at https://thesmsworks.co.uk/user/login
 
 try {
     $result = $apiInstance->keySecret($customerid);
@@ -39,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customerid** | **string**| The Customer ID |
+ **customerid** | **string**| Utility method. Please generate your API key by following the instructions on your account page at https://thesmsworks.co.uk/user/login |
 
 ### Return type
 
@@ -61,7 +61,7 @@ No authorization required
 
 
 
-Generates a Json Web Token
+Generates a JSON Web Token for including in the Authorization header of all your calls to the API. This only needs to be done once. Generate the customer ID, API Key & Secret required for this call from the API Key tab your account page.
 
 ### Example
 ```php

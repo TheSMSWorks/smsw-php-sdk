@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **content** | **string** |  | 
 **created** | **string** |  | 
 **customerid** | **string** |  | 
-**destination** | [**float**](float.md) |  | 
+**destination** | [**BigDecimal**](BigDecimal.md) |  | 
 **failurereason** | **object** |  | [optional] 
 **id** | **string** |  | [optional] 
 **keyword** | **string** |  | 
@@ -18,5 +18,5 @@ Name | Type | Description | Notes
 **sender** | **string** |  | 
 **tag** | **string** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
