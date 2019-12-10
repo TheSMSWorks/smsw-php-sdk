@@ -1,8 +1,8 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
-    "description": "",
+    "name": "TheSMSWorks/smsw-php-sdk",
+    "description": "PHP SDK for the SMS Works Message API",
     "keywords": [
-        "swagger",
+        "sms",
         "php",
         "sdk",
         "api"
