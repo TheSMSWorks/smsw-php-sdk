@@ -24,7 +24,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "thesmsworks/smsw-php-sdk": "*@dev"
   }
 }
 ```
@@ -92,21 +92,21 @@ All URIs are relative to *https://api.thesmsworks.co.uk/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuthApi* | [**keySecret**](docs/Api/AuthApi.md#keysecret) | **GET** /auth/getApiKey | 
-*AuthApi* | [**login**](docs/Api/AuthApi.md#login) | **POST** /auth/token | 
-*BatchMessagesApi* | [**cancelScheduledBatchJob**](docs/Api/BatchMessagesApi.md#cancelscheduledbatchjob) | **DELETE** /batches/schedule/{batchid} | 
-*BatchMessagesApi* | [**getBatchById**](docs/Api/BatchMessagesApi.md#getbatchbyid) | **GET** /batch/{batchid} | 
-*BatchMessagesApi* | [**scheduleBatch**](docs/Api/BatchMessagesApi.md#schedulebatch) | **POST** /batch/schedule | 
-*BatchMessagesApi* | [**sendBatch**](docs/Api/BatchMessagesApi.md#sendbatch) | **POST** /batch/send | 
-*CreditsApi* | [**credits**](docs/Api/CreditsApi.md#credits) | **GET** /credits/balance | 
-*MessagesApi* | [**cancelScheduledJob**](docs/Api/MessagesApi.md#cancelscheduledjob) | **DELETE** /messages/schedule/{messageid} | 
-*MessagesApi* | [**getInboxMessages**](docs/Api/MessagesApi.md#getinboxmessages) | **POST** /messages/inbox | 
-*MessagesApi* | [**getMessageById**](docs/Api/MessagesApi.md#getmessagebyid) | **GET** /messages/{messageid} | 
-*MessagesApi* | [**getMessages**](docs/Api/MessagesApi.md#getmessages) | **POST** /messages | 
-*MessagesApi* | [**scheduleMessage**](docs/Api/MessagesApi.md#schedulemessage) | **POST** /message/schedule | 
-*MessagesApi* | [**sendMessage**](docs/Api/MessagesApi.md#sendmessage) | **POST** /message/send | 
-*UtilsApi* | [**getError**](docs/Api/UtilsApi.md#geterror) | **GET** /utils/errors/{errorcode} | 
-*UtilsApi* | [**test**](docs/Api/UtilsApi.md#test) | **GET** /utils/test | 
+*AuthApi* | [**keySecret**](docs/Api/AuthApi.md#keysecret) | **GET** /auth/getApiKey |
+*AuthApi* | [**login**](docs/Api/AuthApi.md#login) | **POST** /auth/token |
+*BatchMessagesApi* | [**cancelScheduledBatchJob**](docs/Api/BatchMessagesApi.md#cancelscheduledbatchjob) | **DELETE** /batches/schedule/{batchid} |
+*BatchMessagesApi* | [**getBatchById**](docs/Api/BatchMessagesApi.md#getbatchbyid) | **GET** /batch/{batchid} |
+*BatchMessagesApi* | [**scheduleBatch**](docs/Api/BatchMessagesApi.md#schedulebatch) | **POST** /batch/schedule |
+*BatchMessagesApi* | [**sendBatch**](docs/Api/BatchMessagesApi.md#sendbatch) | **POST** /batch/send |
+*CreditsApi* | [**credits**](docs/Api/CreditsApi.md#credits) | **GET** /credits/balance |
+*MessagesApi* | [**cancelScheduledJob**](docs/Api/MessagesApi.md#cancelscheduledjob) | **DELETE** /messages/schedule/{messageid} |
+*MessagesApi* | [**getInboxMessages**](docs/Api/MessagesApi.md#getinboxmessages) | **POST** /messages/inbox |
+*MessagesApi* | [**getMessageById**](docs/Api/MessagesApi.md#getmessagebyid) | **GET** /messages/{messageid} |
+*MessagesApi* | [**getMessages**](docs/Api/MessagesApi.md#getmessages) | **POST** /messages |
+*MessagesApi* | [**scheduleMessage**](docs/Api/MessagesApi.md#schedulemessage) | **POST** /message/schedule |
+*MessagesApi* | [**sendMessage**](docs/Api/MessagesApi.md#sendmessage) | **POST** /message/send |
+*UtilsApi* | [**getError**](docs/Api/UtilsApi.md#geterror) | **GET** /utils/errors/{errorcode} |
+*UtilsApi* | [**test**](docs/Api/UtilsApi.md#test) | **GET** /utils/test |
 
 ## Documentation For Models
 
@@ -140,6 +140,3 @@ Class | Method | HTTP request | Description
 
 
 ## Author
-
-
-
